@@ -1,675 +1,716 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- saved from url=(0030)https://pengsongyou.github.io/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="xDNWUvx6Q5EWK5YYSyKvK8DZTmvXhKsGX203Ll-BFFE">
   <title>Yizhi Wang</title>
-  
-  <meta name="google-site-verification" content="xDNWUvx6Q5EWK5YYSyKvK8DZTmvXhKsGX203Ll-BFFE">	
-  <meta name="viewport" content="“width=800”">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230066cc'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-size='48' font-family='Arial' fill='white'%3EY%3C/text%3E%3C/svg%3E">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f4f5f7;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-  <style type="text/css">
-    @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
-      /* Color scheme stolen from Sergey Karayev */
-      a {
-      /*color: #b60a1c;*/
-      color: #1772d0;
-      /*color: #bd0a36;*/
-      text-decoration:none;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header-card {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .header-photo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+      margin-right: 40px;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .header-info h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px 0;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .header-info .title {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .header-info .contact {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .header-info .affiliation {
+      color: #0066cc;
+      font-weight: 500;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    .tab-btn {
+      padding: 12px 30px;
+      border: none;
+      background: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+      transition: all 0.2s;
+      box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+      flex: 1;
+      text-align: center;
+    }
+
+    .tab-btn.about {
+      color: #0066cc;
+    }
+
+    .tab-btn.research {
+      color: #fd7e14;
+    }
+
+    .tab-btn.experience {
+      color: #28a745;
+    }
+
+    .tab-btn.service {
+      color: #dc3545;
+    }
+
+    .tab-btn.active {
+      color: #fff !important;
+      box-shadow: none;
+    }
+
+    .tab-btn.active.about {
+      background-color: #0066cc;
+    }
+
+    .tab-btn.active.research {
+      background-color: #fd7e14;
+    }
+
+    .tab-btn.active.experience {
+      background-color: #28a745;
+    }
+
+    .tab-btn.active.service {
+      background-color: #dc3545;
+    }
+
+    .tab-btn:not(.active):hover {
+      background-color: #eaeaea;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      min-height: 400px;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
       }
-      a:focus, a:hover {
-      color: #f09228;
-      text-decoration:none;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      body,td,th,tr,p,a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 15px;
-      font-weight: 300;
+    }
+
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin: 0 0 20px 0;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+      margin: 35px 0 15px;
+    }
+
+    .news-section {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    .news-list,
+    .simple-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-item {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .news-date {
+      font-weight: 600;
+      color: #0066cc;
+      min-width: 90px;
+      margin-right: 15px;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .list-item {
+      margin-bottom: 22px;
+      border-bottom: 1px solid #f4f4f4;
+      padding-bottom: 22px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .list-item:last-child {
+      border: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      padding: 5px;
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .pub-figure {
+      width: 150px;
+      height: 105px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      flex-shrink: 0;
+      object-fit: cover;
+      background: #fafafa;
+    }
+
+    video.pub-figure {
+      display: block;
+    }
+
+    .item-details {
+      flex-grow: 1;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .item-meta {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .item-date {
+      float: right;
+      color: #999;
+      font-size: 0.9rem;
+      margin-left: 20px;
+    }
+
+    .venue {
+      color: #fd7e14;
+      font-weight: 600;
+    }
+
+    .highlight {
+      background-color: #fff8d8;
+      border-radius: 6px;
+      padding: 18px;
+    }
+
+    .footer {
+      color: #888;
+      font-size: 0.85rem;
+      text-align: right;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 12px;
       }
-      strong {
-      font-family: 'Roboto', sans-serif;
-      /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-      /*font-family: 'Avenir Next';*/
-      font-size: 15px;
-      font-weight: 400;
+
+      .header-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 26px 22px;
       }
-      heading {
-      /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-      font-family: 'Roboto', sans-serif;
-      /*font-family: 'Avenir Next';*/
-      /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-      font-size: 24px;
-      font-weight: 400;
+
+      .header-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
       }
-      papertitle {
-      /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-      font-family: 'Roboto', sans-serif;
-      /*font-family: 'Avenir Next';*/
-      /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-      font-size: 15px;
-      font-weight:500;
+
+      .header-info h1 {
+        font-size: 2rem;
       }
-      name {
-      /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-      font-family: 'Roboto', sans-serif;
-      /*font-family: 'Avenir Next';*/
-      font-weight: 400;
-      font-size: 32px;
+
+      .nav-tabs {
+        flex-wrap: wrap;
       }
-      .one
-      {
-      width: 160px;
-      height: 140px;
-      position: relative;
+
+      .tab-btn {
+        border-radius: 8px;
+        margin-bottom: 5px;
+        width: 48%;
+        flex-basis: calc(50% - 10px);
+        padding: 11px 14px;
       }
-      .two
-      {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
+
+      .content-card {
+        border-radius: 8px;
+        padding: 26px 20px;
       }
-      .fade {
-       transition: opacity .2s ease-in-out;
-       -moz-transition: opacity .2s ease-in-out;
-       -webkit-transition: opacity .2s ease-in-out;
+
+      .news-item,
+      .list-item {
+        flex-direction: column;
       }
-      span.highlight {
-          background-color: #ffffd0;
+
+      .item-date {
+        float: none;
+        display: block;
+        margin: 0 0 5px 0;
       }
-    </style>
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+      .news-date {
+        min-width: 0;
+      }
+
+      .pub-figure {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 10 / 7;
+      }
+
+      .company-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tbody><tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <!--<tr onmouseout="headshot_stop()" onmouseover="headshot_start()">-->
-      <tbody><tr>
-        <td width="67%" valign="middle">
-          <p align="center">
-            <name>Yizhi Wang (王逸之)</name>
-            <!--<br>
-            ruthfong at robots dot ox dot ac dot uk-->
-          </p>
+  <div class="container">
+    <div class="header-card">
+      <img src="images/yizhi_wang_s_selfie_phd.jpeg" alt="Yizhi Wang" class="header-photo">
 
-          <p>
-            I am currently a Research Scientist at ByteDance/Tiktok, working on video synthesis and generation.
-	  </p>
-	  <p>
-	    Previously, I was a Postdoc Fellow supervised by Professor <a href="https://www.cs.sfu.ca/~haoz/index.html">Hao (Richard) Zhang</a> in <a href="https://gruvi.cs.sfu.ca/">GrUVi Lab</a> at Simon Fraser University (SFU), Canada. During my postdoc, I worked on 3D Shape Reconstruction and Content Creation.
-          </p>
-          <p>
-            I received my PhD degree from Peking University, where I worked on Computer Vision and Computer Graphics. During my PhD, I was focused on applying deep generative models to analyze and synthesize 2D geometric data (e.g., glyph, font, and layout). I was supervised by Prof. <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a> and Prof. <a href="https://scholar.google.com/citations?user=Ox427jAAAAAJ&hl=en&oi=ao">Jianguo Xiao</a>.
-          </p>
-              
-          <p align="center">
-            <a href="mailto:yizhiwang.cg@gmail.com">Email</a> &nbsp/&nbsp
-            <a href="data/yizhi_wang_s_CV_20260407.pdf">CV</a> &nbsp/&nbsp
-            <a href="https://scholar.google.com/citations?user=0S3NCzUAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-            <a href="https://github.com/yizhiwang96/">Github</a> &nbsp/&nbsp
-	    <a href="https://twitter.com/YizhiWang15">Twitter</a>
-          </p>
-          </td>
+      <div class="header-info">
+        <h1>Yizhi Wang (&#29579;&#36920;&#20043;)</h1>
+        <div class="title">Senior Research Scientist</div>
+        <div class="contact">
+          yizhiwang.cg at gmail dot com<br>
+          <a href="mailto:yizhiwang.cg@gmail.com">Email</a> /
+          <a href="data/yizhi_wang_s_CV_20260407.pdf">CV</a> /
+          <a href="https://scholar.google.com/citations?user=0S3NCzUAAAAJ&amp;hl=en">Google Scholar</a> /
+          <a href="https://github.com/yizhiwang96/">GitHub</a> /
+          <a href="https://twitter.com/YizhiWang15">Twitter</a>
+        </div>
+        <div class="affiliation">
+          ByteDance / TikTok<br>
+          Video synthesis and generation
+        </div>
+      </div>
+    </div>
 
-          <td width="33%">
-            <a href="images/yizhi_wang_s_selfie_phd.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/yizhi_wang_s_selfie_phd.jpeg" class="hoverZoomLink"></a>
-          </td>
-        </tr>
-        </tbody></table>
+    <div class="nav-tabs">
+      <button class="tab-btn about active" onclick="openTab('about')">About</button>
+      <button class="tab-btn research" onclick="openTab('research')">Research</button>
+      <button class="tab-btn experience" onclick="openTab('experience')">Experience</button>
+      <button class="tab-btn service" onclick="openTab('service')">Service</button>
+    </div>
 
-	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tbody><tr>
-            <td>
-              <heading>News</heading>
-                <ul>
-      <li><strong>02/2026</strong> <a href="https://viva-paper.github.io/">VIVA</a> is accpeted by <a href="https://cvpr.thecvf.com/Conferences/2026/">CVPR 2026</a>.</li>
-			<li><strong>01/2026</strong> <a href="https://magref-video.github.io/">MAGREF</a> is accpeted by <a href="https://iclr.cc/">ICLR 2026</a>.</li>
-			<li><strong>11/2025</strong> <a href="https://mingrui-zhao.github.io/ACT-R/">ACT-R</a> is accpeted by <a href="https://3dvconf.github.io/2026/">3DV 2026</a>.</li>
-			<li><strong>06/2025</strong> Selected as an <a href="https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer">Outstanding Reviewer</a> for CVPR 2025.</li>
-			<li><strong>01/2025</strong> <a href="https://santisy.github.io/GALA/">GALA</a> is accpeted by <a href="https://iclr.cc/">ICLR 2025</a>.</li>
-			<li><strong>07/2024</strong> <a href="https://mingrui-zhao.github.io/SweepNet/">SweepNet</a> is accepted by <a href="https://eccv.ecva.net/">ECCV 2024</a>.</li>
-			<li><strong>05/2024</strong> <a href="https://sairajk.github.io/easi-tex/">EASI-Tex</a> is accepted by <a href="https://s2024.siggraph.org/">SIGGRAPH 2024</a> as a Journal Paper.</li>
-			<li><strong>03/2024</strong> <a href="https://yizhiwang96.github.io/Slice3D/">Slice3D</a> is accepted by <a href="https://cvpr.thecvf.com/Conferences/2024">CVPR 2024</a>. <a href="https://github.com/yizhiwang96/Slice3D">Code</a> has been released. Demo is coming out! </li>
-			<li><strong>01/2024</strong> I am co-organzing the <a href="https://sites.google.com/view/gdug-workshop">Workshop on Graphic Design Understanding and Generation</a> in CVPR 2024.</li>
-      <li><strong>12/2023</strong> Introducing <a href="https://yizhiwang96.github.io/Slice3D/">Slice3D</a>, a new notion for single-view 3D reconstruction via <i>multi-slice reasoning</i>. </li>
-		  <li><strong>07/2023</strong> <a href="https://ds-fusion.github.io/">DS-Fusion</a> is accepted by <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>. Check out the fun <a href="https://ds-fusion.github.io/static/videos/ds-fusion_teaser.mp4">video</a>! </li>
-                  <li><strong>06/2023</strong> Check how <a href="https://christinalj.com/">Christina</a> uses <a href="https://yizhiwang96.github.io/deepvecfont_homepage/">DeepVecFont</a> in her art-design project (<a href="https://www.youtube.com/watch?v=ar_kMCQ4DTI&t=403s&ab_channel=christinaissleepy">Video</a> and <a href="https://christinalj.com/crystal-type">Blog</a>)! </li>
-		</li></div>
-                </ul>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+    <div class="content-card">
+      <div id="about" class="tab-content active">
+        <p>
+          I am currently a Senior Research Scientist at ByteDance/TikTok, working on video synthesis and generation.
+        </p>
+        <p>
+          Previously, I was a Postdoc Fellow supervised by Professor
+          <a href="https://www.cs.sfu.ca/~haoz/index.html">Hao (Richard) Zhang</a> in
+          <a href="https://gruvi.cs.sfu.ca/">GrUVi Lab</a> at Simon Fraser University (SFU), Canada.
+          During my postdoc, I worked on 3D shape reconstruction and content creation.
+        </p>
+        <p>
+          I received my PhD degree from Peking University, where I worked on Computer Vision and Computer Graphics.
+          During my PhD, I focused on applying deep generative models to analyze and synthesize 2D geometric data
+          such as glyphs, fonts, and layouts. I was supervised by Prof.
+          <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a> and Prof.
+          <a href="https://scholar.google.com/citations?user=Ox427jAAAAAJ&amp;hl=en&amp;oi=ao">Jianguo Xiao</a>.
+        </p>
 
+        <div class="news-section">
+          <h3>News</h3>
+          <ul class="news-list">
+            <li class="news-item"><span class="news-date">Feb 2026</span><span><a href="https://viva-paper.github.io/">VIVA</a> is accepted by <a href="https://cvpr.thecvf.com/Conferences/2026/">CVPR 2026</a>.</span></li>
+            <li class="news-item"><span class="news-date">Jan 2026</span><span><a href="https://magref-video.github.io/">MAGREF</a> is accepted by <a href="https://iclr.cc/">ICLR 2026</a>.</span></li>
+            <li class="news-item"><span class="news-date">Nov 2025</span><span><a href="https://mingrui-zhao.github.io/ACT-R/">ACT-R</a> is accepted by <a href="https://3dvconf.github.io/2026/">3DV 2026</a>.</span></li>
+            <li class="news-item"><span class="news-date">Jun 2025</span><span>Selected as an <a href="https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer">Outstanding Reviewer</a> for CVPR 2025.</span></li>
+            <li class="news-item"><span class="news-date">Jan 2025</span><span><a href="https://santisy.github.io/GALA/">GALA</a> is accepted by <a href="https://iclr.cc/">ICLR 2025</a>.</span></li>
+            <li class="news-item"><span class="news-date">Jul 2024</span><span><a href="https://mingrui-zhao.github.io/SweepNet/">SweepNet</a> is accepted by <a href="https://eccv.ecva.net/">ECCV 2024</a>.</span></li>
+            <li class="news-item"><span class="news-date">May 2024</span><span><a href="https://sairajk.github.io/easi-tex/">EASI-Tex</a> is accepted by <a href="https://s2024.siggraph.org/">SIGGRAPH 2024</a> as a Journal Paper.</span></li>
+            <li class="news-item"><span class="news-date">Mar 2024</span><span><a href="https://yizhiwang96.github.io/Slice3D/">Slice3D</a> is accepted by <a href="https://cvpr.thecvf.com/Conferences/2024">CVPR 2024</a>. <a href="https://github.com/yizhiwang96/Slice3D">Code</a> has been released.</span></li>
+            <li class="news-item"><span class="news-date">Jan 2024</span><span>I am co-organizing the <a href="https://sites.google.com/view/gdug-workshop">Workshop on Graphic Design Understanding and Generation</a> in CVPR 2024.</span></li>
+            <li class="news-item"><span class="news-date">Dec 2023</span><span>Introducing <a href="https://yizhiwang96.github.io/Slice3D/">Slice3D</a>, a new notion for single-view 3D reconstruction via <i>multi-slice reasoning</i>.</span></li>
+            <li class="news-item"><span class="news-date">Jul 2023</span><span><a href="https://ds-fusion.github.io/">DS-Fusion</a> is accepted by <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>. Check out the fun <a href="https://ds-fusion.github.io/static/videos/ds-fusion_teaser.mp4">video</a>.</span></li>
+            <li class="news-item"><span class="news-date">Jun 2023</span><span>Check how <a href="https://christinalj.com/">Christina</a> uses <a href="https://yizhiwang96.github.io/deepvecfont_homepage/">DeepVecFont</a> in her art-design project (<a href="https://www.youtube.com/watch?v=ar_kMCQ4DTI&amp;t=403s&amp;ab_channel=christinaissleepy">Video</a> and <a href="https://christinalj.com/crystal-type">Blog</a>).</span></li>
+          </ul>
+        </div>
+      </div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-                I have strong interests in shape synthesis and analysis. Specifically, my researching projects cover the following topics: 3D Reconstruction, Font Generation, Layout Generation, Scene Text (Character) Recognition and Detection, Font Recognition, etc. Representative papers are <span class="highlight">highlighted</span>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+      <div id="research" class="tab-content">
+        <p>
+          Representative papers are highlighted.
+        </p>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-  
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <video  width=120% height=120% muted autoplay loop>
-                <source src="images/cvpr26_viva.mp4" type="video/mp4">
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-              <a href="https://viva-paper.github.io/">
-                <papertitle>VIVA: VLM-Guided Instruction-Based Video Editing with Reward Optimization</papertitle>
-              </a>
-              <br>
-              <a href="https://oliver-cong02.github.io/">Xiaoyan Cong</a>,
-              <a href="https://yanght321.github.io/">Haotian Yang</a>,
-              <a href="https://angtianwang.github.io/">Angtian Wang</a>,
-              <strong>Yizhi Wang</strong>,
-              <a href="https://ihollywhy.github.io/">Yiding Yang</a>,
-              <a href="https://czzhang179.github.io/zcy.github.io/">Canyu Zhang</a>,
-              <a href="http://www.chongyangma.com/">Chongyang Ma</a>
-              <br>
-              <em>CVPR</em>, 2026  
-              <br>
-              <a href="https://viva-paper.github.io/">project page</a> / 
-              <a href="https://arxiv.org/abs/2512.16906">arXiv</a> / 
-              
-              <a href=https://github.com/Oliver-Cong02/VIVA/>code</a>
-              <p></p>
-              <p>A video editing framework that encodes editing instructions with a vision-language model (VLM) and leverages GRPO to enhance editing performance.</p>
-            </td>
-          </tr>
+        <ul class="simple-list">
+          <li class="list-item">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/cvpr26_viva.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="https://viva-paper.github.io/">VIVA: VLM-Guided Instruction-Based Video Editing with Reward Optimization</a></div>
+              <div class="item-meta"><a href="https://oliver-cong02.github.io/">Xiaoyan Cong</a>, <a href="https://yanght321.github.io/">Haotian Yang</a>, <a href="https://angtianwang.github.io/">Angtian Wang</a>, <strong>Yizhi Wang</strong>, <a href="https://ihollywhy.github.io/">Yiding Yang</a>, <a href="https://czzhang179.github.io/zcy.github.io/">Canyu Zhang</a>, <a href="http://www.chongyangma.com/">Chongyang Ma</a></div>
+              <div class="item-meta venue">CVPR 2026</div>
+              <div class="item-meta"><a href="https://viva-paper.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2512.16906">arXiv</a> / <a href="https://github.com/Oliver-Cong02/VIVA/">Code</a></div>
+              <div class="item-meta">A video editing framework that encodes editing instructions with a vision-language model and leverages GRPO to enhance editing performance.</div>
+            </div>
+          </li>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-  
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <video  width=120% height=120% muted autoplay loop>
-                <source src="images/arxiv26_magref.mp4" type="video/mp4">
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-              <a href="https://magref-video.github.io/">
-                <papertitle>MAGREF: Masked Guidance for Any-Reference Video Generation with Subject Disentanglement</papertitle>
-              </a>
-              <br>
-              <a href="">Yufan Deng</a>,
-              <a href="">Yuanyang Yin</a>,
-              <a href="">Xun Guo</a>,
-              <strong>Yizhi Wang</strong>,
-              <a href="">Jacob Zhiyuan Fang</a>,
-              <a href="">Shenghai Yuan</a>,
-              <a href="">Yiding Yang</a>,
-              <a href="">Angtian Wang</a>,
-              <a href="">Bo Liu</a>,
-              <a href="">Haibin Huang</a>,
-              <a href="">Chongyang Ma</a>
-              <br>
-              <em>ICLR</em>, 2026  
-              <br>
-              <a href="https://magref-video.github.io/">project page</a> / 
-              <a href="https://arxiv.org/abs/2505.23742/">arXiv</a> / 
-              
-              <a href="https://github.com/MAGREF-Video/MAGREF/">code</a> /
-              <a href="https://www.youtube.com/watch?v=jYKzkomRFb8">video</a>
-              <p></p>
-              <p>A novel conditioning approach with subject disentanglement for identity-consistent video generation from multiple reference images.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/arxiv26_magref.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="https://magref-video.github.io/">MAGREF: Masked Guidance for Any-Reference Video Generation with Subject Disentanglement</a></div>
+              <div class="item-meta">Yufan Deng, Yuanyang Yin, Xun Guo, <strong>Yizhi Wang</strong>, Jacob Zhiyuan Fang, Shenghai Yuan, Yiding Yang, Angtian Wang, Bo Liu, Haibin Huang, Chongyang Ma</div>
+              <div class="item-meta venue">ICLR 2026</div>
+              <div class="item-meta"><a href="https://magref-video.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2505.23742/">arXiv</a> / <a href="https://github.com/MAGREF-Video/MAGREF/">Code</a> / <a href="https://www.youtube.com/watch?v=jYKzkomRFb8">Video</a></div>
+              <div class="item-meta">A novel conditioning approach with subject disentanglement for identity-consistent video generation from multiple reference images.</div>
+            </div>
+          </li>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-  
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <img src='images/iclr25_gala.png' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-              <a href="https://santisy.github.io/GALA/">
-                <papertitle>GALA: Geometry-Aware Local Adaptive Grids for Detailed 3D Generation</papertitle>
-              </a>
-              <br>
-              <a href="https://santisy.github.io/">Dingdong Yang</a>,
-              <strong>Yizhi Wang</strong>,
-              <a href="https://prs.igp.ethz.ch/group/people/person-detail.schindler.html/">Konrad Schindler</a>,
-              <a href="https://arash-mham.github.io/">Ali Mahdavi-Amiri</a>,
-              <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>,
-              <br>
-              <em>ICLR</em>, 2025  
-              <br>
-              <a href="https://santisy.github.io/GALA/">project page</a> / 
-              <a>arXiv</a> / 
-              
-              <a>code</a> /
-                  <a>video</a>
-              <p></p>
-              <p>A novel representation of 3D shapes using oriented and anisotropic local grids.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <img src="images/iclr25_gala.png" alt="GALA" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://santisy.github.io/GALA/">GALA: Geometry-Aware Local Adaptive Grids for Detailed 3D Generation</a></div>
+              <div class="item-meta"><a href="https://santisy.github.io/">Dingdong Yang</a>, <strong>Yizhi Wang</strong>, <a href="https://prs.igp.ethz.ch/group/people/person-detail.schindler.html/">Konrad Schindler</a>, <a href="https://arash-mham.github.io/">Ali Mahdavi-Amiri</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a></div>
+              <div class="item-meta venue">ICLR 2025</div>
+              <div class="item-meta"><a href="https://santisy.github.io/GALA/">Project Page</a> / <a>arXiv</a> / <a>Code</a> / <a>Video</a></div>
+              <div class="item-meta">A novel representation of 3D shapes using oriented and anisotropic local grids.</div>
+            </div>
+          </li>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <li class="list-item highlight">
+            <img src="images/slice3d.png" alt="Slice3D" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://yizhiwang96.github.io/Slice3D/">Slice3D: Multi-Slice, Occlusion-Revealing, Single View 3D Reconstruction</a></div>
+              <div class="item-meta"><strong>Yizhi Wang</strong>, <a href="https://www.sfu.ca/~wpintoli/">Wallace Lira</a>, <a href="https://wqwang.me/">Wenqi Wang</a>, <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a></div>
+              <div class="item-meta venue">CVPR 2024</div>
+              <div class="item-meta"><a href="https://yizhiwang96.github.io/Slice3D/">Project Page</a> / <a href="https://arxiv.org/abs/2312.02221">arXiv</a> / <a href="https://github.com/yizhiwang96/Slice3D">Code</a> / <a href="https://www.youtube.com/watch?v=4MDAiFWdXRw&amp;t=10s&amp;ab_channel=YizhiWang">Video</a></div>
+              <div class="item-meta">Slice3D predicts multi-slice images to reveal occluded parts without changing the camera, then lifts the slices into a 3D model.</div>
+            </div>
+          </li>
 
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()" bgcolor="#ffffd0">
-            <td width="25%">
-              <div class="one">
-                <img src='images/slice3d.png' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://yizhiwang96.github.io/Slice3D/">
-                <papertitle>Slice3D: Multi-Slice, Occlusion-Revealing, Single View 3D Reconstruction</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang</strong>,
-              <a href="https://www.sfu.ca/~wpintoli/">Wallace Lira</a>,
-              <a href="https://wqwang.me/">Wenqi Wang</a>,
-              <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a>,
-              <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>,
-              <br>
-              <em>CVPR</em>, 2024  
-              <br>
-							<a href="https://yizhiwang96.github.io/Slice3D/">project page</a> / 
-							<a href="https://arxiv.org/abs/2312.02221">arXiv</a> / 
-							
-							<a href="https://github.com/yizhiwang96/Slice3D">code</a> /
-		    					<a href="https://www.youtube.com/watch?v=4MDAiFWdXRw&t=10s&ab_channel=YizhiWang">video</a>
-              <p></p>
-              <p>Our single-view 3D reconstruction method, Slice3D, predicts multi-slice images to reveal occluded parts without changing the camera (in contrast to multi-view synthesis), and then lifts the slices into a 3D model.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <img src="images/eccv24_sweep_net.gif" alt="SweepNet" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://mingrui-zhao.github.io/SweepNet/">SweepNet: Unsupervised Learning Shape Abstraction via Neural Sweepers</a></div>
+              <div class="item-meta"><a href="https://mingrui-zhao.github.io/">Mingrui Zhao</a>, <strong>Yizhi Wang</strong>, <a href="https://fenggenyu.github.io/">Fenggen Yu</a>, <a href="https://changqingzou.weebly.com/">Changqing Zou</a>, <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a></div>
+              <div class="item-meta venue">ECCV 2024</div>
+              <div class="item-meta"><a href="https://mingrui-zhao.github.io/SweepNet/">Project Page</a> / <a>arXiv</a> / <a>Code</a> / <a>Video</a></div>
+              <div class="item-meta">A novel approach for shape abstraction via sweep surfaces, using superellipses for profiles and B-spline curves for axes.</div>
+            </div>
+          </li>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <li class="list-item">
+            <img src="images/easi_tex.jpg" alt="EASI-Tex" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://sairajk.github.io/easi-tex/">EASI-Tex: Edge-Aware Mesh Texturing from Single Image</a></div>
+              <div class="item-meta"><a href="https://sairajk.github.io/">Sai Raj Kishore Perla</a>, <strong>Yizhi Wang</strong>, <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a></div>
+              <div class="item-meta venue">ACM Transactions on Graphics (SIGGRAPH Journal-Track) 2024</div>
+              <div class="item-meta"><a href="https://sairajk.github.io/easi-tex/">Project Page</a> / <a href="https://arxiv.org/abs/2405.17393">arXiv</a> / <a href="https://github.com/sairajk/easi-tex">Code</a> / <a>Video</a></div>
+              <div class="item-meta">A single-image mesh texturing approach that employs diffusion models with judicious conditioning to seamlessly transfer textures.</div>
+            </div>
+          </li>
 
-            <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-              <td width="25%">
-                <div class="one">
-                  <img src='images/eccv24_sweep_net.gif' width="190">
-                </div>
-              </td>
-              <td valign="top" width="75%">
-                <a href="https://mingrui-zhao.github.io/SweepNet/">
-                  <papertitle>SweepNet: Unsupervised Learning Shape Abstraction via Neural Sweepers</papertitle>
-                </a>
-                <br>
-                <a href="https://mingrui-zhao.github.io/">Mingrui Zhao</a>,
-                <strong>Yizhi Wang</strong>,
-                <a href="https://fenggenyu.github.io/">Fenggen Yu</a>,
-                <a href="https://changqingzou.weebly.com/">Changqing Zou</a>,
-                <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a>,
-                <br>
-                <em>ECCV</em>, 2024  
-                <br>
-                <a href="https://mingrui-zhao.github.io/SweepNet/">project page</a> / 
-                <a>arXiv</a> / 
-                
-                <a>code</a> /
-                    <a>video</a>
-                <p></p>
-                <p>A novel approach for shape abstraction via sweep surfaces, which utilize superellipses for profile representation and B-spline curves for the axis.</p>
-              </td>
-            </tr>
-          
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <li class="list-item highlight">
+            <img src="images/aro_net.png" alt="ARO-Net" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://aro-net.github.io/">ARO-Net: Learning Implicit Fields from Anchored Radial Observations</a></div>
+              <div class="item-meta"><strong>Yizhi Wang*</strong>, Zeyu Huang*, <a href="https://faculty.runi.ac.il/arik/site/index.asp">Ariel Shamir</a>, <a href="http://vcc.tech/~huihuang">Hui Huang</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>, <a href="https://csse.szu.edu.cn/staff/ruizhenhu/">Ruizhen Hu</a></div>
+              <div class="item-meta venue">CVPR 2023</div>
+              <div class="item-meta"><a href="https://aro-net.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2212.10275">arXiv</a> / <a href="https://github.com/yizhiwang96/ARO-Net">Code</a> / <a href="https://www.youtube.com/watch?v=RVoOkgbi9lk&amp;ab_channel=YizhiWang">Video</a></div>
+              <div class="item-meta">A category-agnostic shape encoding for learning neural field representations amid significant shape variations.</div>
+            </div>
+          </li>
 
-            <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-              <td width="25%">
-                <div class="one">
-                  <img src='images/easi_tex.jpg' width="190">
-                </div>
-              </td>
-              <td valign="top" width="75%">
-                <a href="https://sairajk.github.io/easi-tex/">
-                  <papertitle>EASI-Tex: Edge-Aware Mesh Texturing from Single Image</papertitle>
-                </a>
-                <br>
-                <a href="https://sairajk.github.io/">Sai Raj Kishore Perla</a>,
-                <strong>Yizhi Wang</strong>,
-                <a href="https://www.sfu.ca/~amahdavi">Ali Mahdavi-Amiri</a>,
-                <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>,
-                <br>
-                <em>ACM Transactions on Graphics (SIGGRAPH Journal-Track)</em>, 2024  
-                <br>
-                <a href="https://sairajk.github.io/easi-tex/">project page</a> / 
-                <a href="https://arxiv.org/abs/2405.17393">arXiv</a> / 
-                
-                <a href="https://github.com/sairajk/easi-tex">code</a> /
-                    <a>video</a>
-                <p></p>
-                <p>A novel approach for single-image mesh texturing, which employs diffusion models with judicious conditioning to seamlessly transfer textures.</p>
-              </td>
-            </tr>
+          <li class="list-item">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/ds_fusion.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="https://ds-fusion.github.io/">DS-Fusion: Artistic Typography via Discriminated and Stylized Diffusion</a></div>
+              <div class="item-meta"><a href="http://mtanveer.com/">Maham Tanveer</a>, <strong>Yizhi Wang</strong>, <a href="https://www.sfu.ca/~amahdavi/">Ali Mahdavi-Amiri</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a></div>
+              <div class="item-meta venue">ICCV 2023</div>
+              <div class="item-meta"><a href="https://ds-fusion.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2303.09604">arXiv</a> / <a href="https://github.com/tmaham/DS-Fusion">Code</a></div>
+              <div class="item-meta">Automatically generate artistic typography by stylizing letter fonts to convey the semantics of an input word.</div>
+            </div>
+          </li>
 
-	        <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()" bgcolor="#ffffd0">
-            <td width="25%">
-              <div class="one">
-                <img src='images/aro_net.png' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://aro-net.github.io/">
-                <papertitle>ARO-Net: Learning Implicit Fields from Anchored Radial Observations</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang*</strong>,
-              <a href="">Zeyu Huang*</a>,
-              <a href="https://faculty.runi.ac.il/arik/site/index.asp">Ariel Shamir</a>,
-              <a href="http://vcc.tech/~huihuang">Hui Huang</a>,
-              <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>,
-              <a href="https://csse.szu.edu.cn/staff/ruizhenhu/">Ruizhen Hu</a>
-              <br>
-              <em>CVPR</em>, 2023  
-              <br>
-							<a href="https://aro-net.github.io/">project page</a> / 
-							<a href="https://arxiv.org/abs/2212.10275">arXiv</a> / 
-							
-							<a href="https://github.com/yizhiwang96/ARO-Net">code</a> /
-		    					<a href="https://www.youtube.com/watch?v=RVoOkgbi9lk&ab_channel=YizhiWang">video</a>
-              <p></p>
-              <p>A novel shape encoding for learning neural field representation of shapes that is category-agnostic and generalizable amid significant shape variations.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <img src="images/bright.jpg" alt="BRICS" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://brics-project.github.io/">BRICS: Bi-level feature Representation of Image CollectionS</a></div>
+              <div class="item-meta"><a href="https://santisy.github.io/">Dingdong Yang</a>, <strong>Yizhi Wang</strong>, <a href="https://www.sfu.ca/~amahdavi/">Ali Mahdavi-Amiri</a>, <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a></div>
+              <div class="item-meta venue">arXiv 2023</div>
+              <div class="item-meta"><a href="https://brics-project.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2305.18601">arXiv</a> / <a href="">Code</a></div>
+              <div class="item-meta">A bi-level feature representation for an image collection, with a per-image latent space above a multi-scale feature grid space.</div>
+            </div>
+          </li>
 
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <video  width=118% height=118% muted autoplay loop>
-                <source src="images/ds_fusion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://ds-fusion.github.io/">
-                <papertitle>DS-Fusion: Artistic Typography via Discriminated and Stylized Diffusion</papertitle>
-              </a>
-              <br>
-	      <a href="http://mtanveer.com/">Maham Tanveer</a>,
-              <strong>Yizhi Wang</strong>,  
-   
-              <a href="https://www.sfu.ca/~amahdavi/">Ali Mahdavi-Amiri</a>,
-	      <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>
-              <br>
-              <em>ICCV</em>, 2023  
-              <br>
-							<a href="https://ds-fusion.github.io/">project page</a> / 
-							<a href="https://arxiv.org/abs/2303.09604">arXiv</a> / 
-							
-							<a href="https://github.com/tmaham/DS-Fusion">code</a>		
-              <p></p>
-              <p>Automatically generate an artistic typography by stylizing one or more letter fonts to visually convey the semantics of an input word.</p>
-            </td>
-          </tr>	
-	
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <img src='images/bright.jpg' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://brics-project.github.io/">
-                <papertitle>BRICS: Bi-level feature Representation of Image CollectionS</papertitle>
-              </a>
-              <br>
-	      <a href="https://santisy.github.io/">Dingdong Yang</a>,
-              <strong>Yizhi Wang</strong>,  
-   
-              <a href="https://www.sfu.ca/~amahdavi/">Ali Mahdavi-Amiri</a>,
-	      <a href="https://www.cs.sfu.ca/~haoz/">Hao (Richard) Zhang</a>
-              <br>
-              <em>Arxiv</em>, 2023  
-              <br>
-							<a href="https://brics-project.github.io/">project page</a> / 
-							<a href="https://arxiv.org/abs/2305.18601">arXiv</a> / 
-							
-							<a href="">code</a>		
-              <p></p>
-              <p>A bi-levelfeature representation for an imagecollection, consisting of a per-image latent space on top of a multi-scale feature grid space.</p>
-            </td>
-          </tr>	
-	
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <video  width=118% height=118% muted autoplay loop>
-                <source src="images/dvf_v2_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="">
-                <papertitle>DeepVecFont-v2: Exploiting Transformers to Synthesize Vector Fonts with Higher Quality</papertitle>
-              </a>
-              <br>
-	      <a href="">Yuqing Wang</a>,
-              <strong>Yizhi Wang</strong>,  
-	      <a href="https://yulonghui.github.io/">Longhui Yu</a>,
-	      <a href="https://scholar.google.com/citations?user=HBp_nuAAAAAJ&hl=zh-CN">Yuesheng Zhu</a>,
-	      <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>CVPR</em>, 2023  
-              <br>
-							<a href="">project page</a> / 
-							<a href="https://arxiv.org/abs/2303.14585">arXiv</a> / 
-							
-							<a href="https://github.com/yizhiwang96/deepvecfont-v2">code</a>		
-              <p></p>
-              <p>Employing Transformers and a relaxed representation for higher-quality vector font generation (support Chinese glyphs).</p>
-            </td>
-          </tr>
-	
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <img src='images/cvpr22_textlogolayout.svg' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://github.com/yizhiwang96/TextLogoLayout">
-                <papertitle>Aesthetic Text Logo Synthesis via Content-aware Layout Inferring</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang</strong>,
-              <a href="https://github.com/TrickyGo">Guo Pu</a>,
-              <a href="https://whluo.github.io/">Wenhan Luo</a>,
-              <a href="">Yexin Wang</a>,
-              <a href="https://scholar.google.com/citations?user=ctLbu3IAAAAJ&hl=en&oi=ao">Pengfei Xiong</a>,
-              <a href="https://scholar.google.com/citations?user=uQg2t8EAAAAJ&hl=en&oi=ao">Hongwen Kang</a>,
-              <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>CVPR</em>, 2022  
-              <br>
-							<a href="https://github.com/yizhiwang96/TextLogoLayout">project page</a> / 
-							<a href="">arXiv</a> / 
-							
-							<a href="https://github.com/yizhiwang96/TextLogoLayout">code</a>
-              <p></p>
-              <p>A content-aware layout generation network which takes element images and their corresponding content (such as texts) as input and synthesizes aesthetic layouts for them automatically.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/dvf_v2_2.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="">DeepVecFont-v2: Exploiting Transformers to Synthesize Vector Fonts with Higher Quality</a></div>
+              <div class="item-meta">Yuqing Wang, <strong>Yizhi Wang</strong>, <a href="https://yulonghui.github.io/">Longhui Yu</a>, <a href="https://scholar.google.com/citations?user=HBp_nuAAAAAJ&amp;hl=zh-CN">Yuesheng Zhu</a>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">CVPR 2023</div>
+              <div class="item-meta"><a href="">Project Page</a> / <a href="https://arxiv.org/abs/2303.14585">arXiv</a> / <a href="https://github.com/yizhiwang96/deepvecfont-v2">Code</a></div>
+              <div class="item-meta">Employing Transformers and a relaxed representation for higher-quality vector font generation, including Chinese glyphs.</div>
+            </div>
+          </li>
 
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()" bgcolor="#ffffd0">
-            <td width="25%">
-              <div class="one">
-                <video  width=118% height=118% muted autoplay loop>
-                <source src="images/tog21_deepvecfont.mp4" type="video/mp4">
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://yizhiwang96.github.io/deepvecfont_homepage/">
-                <papertitle>DeepVecFont: Synthesizing High-quality Vector Fonts via Dual-modality Learning</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang</strong>,
-              <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>ACM Transactions on Graphics (SIGGRAPH Asia 2021 Technical Paper)</em>, 2021  
-              <br>
-							<a href="https://yizhiwang96.github.io/deepvecfont_homepage/">project page</a> / 
-							<a href="https://arxiv.org/abs/2110.06688">arXiv</a> / 
-							
-							<a href="https://github.com/yizhiwang96/deepvecfont">code</a>		
-              <p></p>
-              <p>Directly synthesize vector fonts via dual-modality learning and differentiable rasterization (rendering), instead of vectorizing synthesized glyph images by rule-based methods.</p>
-            </td>
-          </tr>
+          <li class="list-item">
+            <img src="images/cvpr22_textlogolayout.svg" alt="TextLogoLayout" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://github.com/yizhiwang96/TextLogoLayout">Aesthetic Text Logo Synthesis via Content-aware Layout Inferring</a></div>
+              <div class="item-meta"><strong>Yizhi Wang</strong>, <a href="https://github.com/TrickyGo">Guo Pu</a>, <a href="https://whluo.github.io/">Wenhan Luo</a>, Yexin Wang, <a href="https://scholar.google.com/citations?user=ctLbu3IAAAAJ&amp;hl=en&amp;oi=ao">Pengfei Xiong</a>, <a href="https://scholar.google.com/citations?user=uQg2t8EAAAAJ&amp;hl=en&amp;oi=ao">Hongwen Kang</a>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">CVPR 2022</div>
+              <div class="item-meta"><a href="https://github.com/yizhiwang96/TextLogoLayout">Project Page</a> / <a href="">arXiv</a> / <a href="https://github.com/yizhiwang96/TextLogoLayout">Code</a></div>
+              <div class="item-meta">A content-aware layout generation network that synthesizes aesthetic layouts from element images and their content.</div>
+            </div>
+          </li>
 
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()" bgcolor="#ffffd0">
-            <td width="25%">
-              <div class="one">
-                <video  width=118% height=118% muted autoplay loop>
-                <source src="images/tog20_attr2font_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://hologerry.github.io/Attr2Font/">
-                <papertitle>Attribute2Font: Creating Fonts You Want From Attributes</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang*</strong>,  
-              <a href="https://yuegao.me/">Yue Gao*</a>,
-              <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>ACM Transactions on Graphics (SIGGRAPH 2020 Technical Paper)</em>, 2020  
-              <br>
-							<a href="https://hologerry.github.io/Attr2Font/">project page</a> / 
-							<a href="https://arxiv.org/abs/2005.07865">arXiv</a> / 
-							
-							<a href="https://github.com/hologerry/Attr2Font">code</a>		
-              <p></p>
-              <p>Automatically synthesize fonts according to user-specified attributes (such as italic, serif, cursive, and angularity) and their corresponding values.</p>
-            </td>
-          </tr>
+          <li class="list-item highlight">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/tog21_deepvecfont.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="https://yizhiwang96.github.io/deepvecfont_homepage/">DeepVecFont: Synthesizing High-quality Vector Fonts via Dual-modality Learning</a></div>
+              <div class="item-meta"><strong>Yizhi Wang</strong>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">ACM Transactions on Graphics (SIGGRAPH Asia 2021 Technical Paper) 2021</div>
+              <div class="item-meta"><a href="https://yizhiwang96.github.io/deepvecfont_homepage/">Project Page</a> / <a href="https://arxiv.org/abs/2110.06688">arXiv</a> / <a href="https://github.com/yizhiwang96/deepvecfont">Code</a></div>
+              <div class="item-meta">Synthesizing vector fonts via dual-modality learning and differentiable rasterization instead of rule-based vectorization.</div>
+            </div>
+          </li>
 
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <img src='images/mm20_efifstr.svg' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://actasidiot.github.io/EFIFSTR">
-                <papertitle>Exploring Font-independent Features for Scene Text Recognition</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang</strong>,
-              <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>ACM Multimedia</em>, 2020  
-              <br>
-							<a href="https://actasidiot.github.io/EFIFSTR">project page</a> / 
-							<a href="https://arxiv.org/abs/2009.07447">arXiv</a> / 
-							
-							<a href="https://github.com/Actasidiot/EFIFSTR">code</a>		
-              <p></p>
-              <p>Address the challenge of font variance in STR and propose a font-independent feature representation method to increase the robustness of STR models.</p>
-            </td>
-          </tr>
-					
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td width="25%">
-              <div class="one">
-                <img src='images/mmm18_fontrec.png' width="190">
-              </div>
-            </td>
-            <td valign="top" width="75%">
-							<a href="https://www.wict.pku.edu.cn/zlian/frwild/">
-                <papertitle> Font Recognition in Natural Images via Transfer Learning</papertitle>
-              </a>
-              <br>
-              <strong>Yizhi Wang</strong>,
-              <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a>
-              <br>
-              <em>MMM</em>, 2018  
-              <br>
-							<a href="https://www.wict.pku.edu.cn/zlian/frwild/">project page</a> / 
-							<a href="https://www.wict.pku.edu.cn/zlian/docs/20181024110641005904.pdf">paper</a> /		
-              <a href="https://drive.google.com/drive/folders/1Q3Go8aU9EPFfsQZCbqoZdASbhqngvkXc?usp=sharing">dataset</a>
-              <p></p>
-              <p>Accurately recognize the font styles of texts in natural images by proposing a novel method based on deep learning and transfer learning.</p>
-            </td>
-          </tr>
-          
+          <li class="list-item highlight">
+            <video class="pub-figure" muted autoplay loop playsinline>
+              <source src="images/tog20_attr2font_2.mp4" type="video/mp4">
+            </video>
+            <div class="item-details">
+              <div class="item-title"><a href="https://hologerry.github.io/Attr2Font/">Attribute2Font: Creating Fonts You Want From Attributes</a></div>
+              <div class="item-meta"><strong>Yizhi Wang*</strong>, <a href="https://yuegao.me/">Yue Gao*</a>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">ACM Transactions on Graphics (SIGGRAPH 2020 Technical Paper) 2020</div>
+              <div class="item-meta"><a href="https://hologerry.github.io/Attr2Font/">Project Page</a> / <a href="https://arxiv.org/abs/2005.07865">arXiv</a> / <a href="https://github.com/hologerry/Attr2Font">Code</a></div>
+              <div class="item-meta">Synthesizing fonts according to user-specified attributes such as italic, serif, cursive, and angularity.</div>
+            </div>
+          </li>
 
+          <li class="list-item">
+            <img src="images/mm20_efifstr.svg" alt="EFIFSTR" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://actasidiot.github.io/EFIFSTR">Exploring Font-independent Features for Scene Text Recognition</a></div>
+              <div class="item-meta"><strong>Yizhi Wang</strong>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">ACM Multimedia 2020</div>
+              <div class="item-meta"><a href="https://actasidiot.github.io/EFIFSTR">Project Page</a> / <a href="https://arxiv.org/abs/2009.07447">arXiv</a> / <a href="https://github.com/Actasidiot/EFIFSTR">Code</a></div>
+              <div class="item-meta">A font-independent feature representation method to improve scene text recognition robustness under font variance.</div>
+            </div>
+          </li>
 
-        </tbody></table>
-	
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tbody><tr>
-            <td>
-              <heading>Invited Talks</heading>
-                <ul>
-                  <li><strong>07/2022</strong> I was invited to give <a href="https://www.bilibili.com/video/BV16Z4y1a7hg">a talk</a> (in Chinese) by CSIG (China Society of Image and Graphics). </li>
+          <li class="list-item">
+            <img src="images/mmm18_fontrec.png" alt="Font Recognition" class="pub-figure">
+            <div class="item-details">
+              <div class="item-title"><a href="https://www.wict.pku.edu.cn/zlian/frwild/">Font Recognition in Natural Images via Transfer Learning</a></div>
+              <div class="item-meta"><strong>Yizhi Wang</strong>, <a href="https://www.icst.pku.edu.cn/zlian/">Zhouhui Lian</a></div>
+              <div class="item-meta venue">MMM 2018</div>
+              <div class="item-meta"><a href="https://www.wict.pku.edu.cn/zlian/frwild/">Project Page</a> / <a href="https://www.wict.pku.edu.cn/zlian/docs/20181024110641005904.pdf">Paper</a> / <a href="https://drive.google.com/drive/folders/1Q3Go8aU9EPFfsQZCbqoZdASbhqngvkXc?usp=sharing">Dataset</a></div>
+              <div class="item-meta">Recognizing font styles of texts in natural images with deep learning and transfer learning.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-                </li></div>
-                </ul>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-				
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Awards</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-					
-          <tr>
-            <td width="100%" valign="center">
-              Merit Student, Peking University. 2018, 2021
-              <br>
-              Excellent Student, Wangxuan Insitute of Peking University. 2020, 2021
-              <br>
-              CETC The 14TH Research Institute Glarun Scholarship, Peking University. 2018
-              <br>
-              Excellent Award, The 17th Programming Contest of Peking University. 2018
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="50%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td width="50%" valign="center"></td>       
-              <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=l3MhaRO61ZZJ-JzbbrMHHIDHgCHMg5-1lw2H1HHU3wA&cl=ffffff&w=a"></script>
-            </td>
-          </tr>
-        </tbody></table>
+      <div id="experience" class="tab-content">
+        <h2>Experience</h2>
+        <ul class="simple-list">
+          <li class="list-item">
+            <img src="images/bytedance-logo.png" alt="ByteDance" class="company-logo">
+            <div class="item-details">
+              <span class="item-date">Mar. 2026 - Now</span>
+              <div class="item-title">Senior Research Scientist</div>
+              <div class="item-meta">ByteDance / TikTok, USA</div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="images/bytedance-logo.png" alt="ByteDance" class="company-logo">
+            <div class="item-details">
+              <span class="item-date">Nov. 2024 - Mar. 2026</span>
+              <div class="item-title">Research Scientist</div>
+              <div class="item-meta">ByteDance / TikTok, USA</div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="images/sfu-logo.png" alt="Simon Fraser University" class="company-logo">
+            <div class="item-details">
+              <span class="item-date">Jan. 2023 - Nov. 2024</span>
+              <div class="item-title">Postdoctoral Fellow</div>
+              <div class="item-meta">Simon Fraser University, Canada</div>
+              <div class="item-meta">Supervisor: Prof. Richard (Hao) Zhang</div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="images/tencent-logo.svg" alt="Tencent" class="company-logo">
+            <div class="item-details">
+              <span class="item-date">Jun. 2021 - Nov. 2021</span>
+              <div class="item-title">Research Intern</div>
+              <div class="item-meta">Tencent</div>
+              <div class="item-meta">Advisor: Dr. Wenhan Luo</div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                <br>
-                template adapted from <a href="https://pengsongyou.github.io/">Songyou</a> and <a href="https://jonbarron.info/">Jon</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>        
-      </td>
-    </tr>
-  </table>
+      <div id="service" class="tab-content">
+        <h2>Service</h2>
+        <h3>Journal Reviews</h3>
+        <ul class="simple-list">
+          <li class="list-item" style="display:block;">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+          <li class="list-item" style="display:block;">IEEE Transactions on Visualization and Computer Graphics (TVCG)</li>
+          <li class="list-item" style="display:block;">Expert Systems with Applications</li>
+        </ul>
+
+        <h3>Conference Reviews</h3>
+        <ul class="simple-list">
+          <li class="list-item" style="display:block;">SIGGRAPH 2026</li>
+          <li class="list-item" style="display:block;">SIGGRAPH Asia 2024, 2025</li>
+          <li class="list-item" style="display:block;">CVPR 2022, 2023, 2024, 2025, 2026</li>
+          <li class="list-item" style="display:block;">ICCV 2021, 2023, 2025</li>
+          <li class="list-item" style="display:block;">ECCV 2022, 2024</li>
+          <li class="list-item" style="display:block;">AAAI 2022, 2023, 2024</li>
+          <li class="list-item" style="display:block;"><strong>Outstanding Reviewer</strong>, CVPR 2025</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      Style adapted from <a href="../brotherhuang.github.io-master/index.html">Haibin Huang</a>.
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      var contents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove("active");
+      }
+
+      var buttons = document.getElementsByClassName("tab-btn");
+      for (var j = 0; j < buttons.length; j++) {
+        buttons[j].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      document.querySelector(".tab-btn." + tabName).classList.add("active");
+    }
+
+    var initialTab = window.location.hash.replace("#", "");
+    if (initialTab && document.getElementById(initialTab)) {
+      openTab(initialTab);
+    }
+  </script>
 </body>
 
 </html>
